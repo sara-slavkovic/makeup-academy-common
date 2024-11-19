@@ -200,83 +200,8 @@ public class Kurs implements GenericEntity {
         //LOWER(nazivKursa) LIKE '$kurs%' -- sadrzi rec kurs negde u nazivu        
     }
 
-    ////////////////////////
-    //so UcitajListuPredavacaPoKursu       
-    //list = repository.vratiSaJoin((Predavac) param);
-    //dbb
-//    @Override//negener
-//    public List<GenericEntity> vratiSaJoin(GenericEntity entity) throws Exception {
-//        List<GenericEntity> list = new LinkedList<>();
-//        String query = "SELECT p.id, p.ime, COUNT(*) AS brojKurseva\n"
-//                + "FROM predavac p JOIN kurs k ON k.idPredavaca=p.id\n"
-//                + "GROUP BY p.id";
-//        Connection connection = DbConnectionFactory.getInstance().getConnection();
-//        Statement st = connection.createStatement();
-//        ResultSet resultSet = st.executeQuery(query);
-//        while (resultSet.next()) {
-//            int id = resultSet.getInt("p.id");
-//            String ime = resultSet.getString("p.ime");
-//            int brojKurseva = resultSet.getInt("brojKurseva");
-//            Predavac p = new Predavac();
-//            p.setBrojKurseva(brojKurseva);
-//            p.setIdPredavaca(id);
-//            p.setIme(ime);
-//            list.add(p);
-//        }
-//        System.out.println("dbbroker: " + list.toString());
-//        resultSet.close();
-//        st.close();
-//        return list;
-//    }
-    //gener
-//        @Override
-//    public List<GenericEntity> vratiSaJoin(GenericEntity entity) throws Exception {
-//        List<GenericEntity> lista = new ArrayList<>();
-//        try {
-//            String query = "SELECT " + entity.getJoinColumns() + " FROM " + entity.getTableName() + entity.getTableAbbreviation() + entity.getJoin() + entity.getGroupBy() + " ORDER BY" + entity.getOrderBy();
-//            System.out.println(query);
-//            Statement st = DBConnection.getInstance().getConnection().createStatement();
-//            ResultSet rs = st.executeQuery(query);
-//            lista = entity.getListFromJoin(rs);
-//            rs.close();
-//            st.close();
-//        } catch (Exception e) {
-//            throw e;
-//        }
-//        return lista;
-//    }
-//
-//    @Override
-//    public List<GenericEntity> vratiSaJoinPodUslovom(GenericEntity entity) throws Exception {
-//        List<GenericEntity> lista = new ArrayList<>();
-//        try {
-//            String query = "SELECT " + entity.getJoinColumns() + " FROM " + entity.getTableName() + entity.getTableAbbreviation() + entity.getJoin() + " WHERE " + entity.getPrimaryKeyForJoin(entity) + " OR " + entity.getCondition(entity);
-//            System.out.println(query);
-//            Statement st = DBConnection.getInstance().getConnection().createStatement();
-//            ResultSet rs = st.executeQuery(query);
-//            lista = entity.getListFromJoin(rs);
-//            rs.close();
-//            st.close();
-//        } catch (Exception e) {
-//            throw e;
-//        }
-//        return lista;
-//    }
-    //  cont 
-//    public List<Predavac> ucitajListuPredavacKurs() throws Exception {
-//        AbstractGenericOperation operation = new UcitajListuPredavacaPoKursu();
-//        operation.execute(new Predavac());
-//        List<Predavac> lista = ((UcitajListuPredavacaPoKursu)operation).getList();
-//        System.out.println("controller "+lista.toString());
-//        return lista;
-//    }
-//predkurscontroller
-//uprepareviewuopenform
-//            List<Predavac> lista = Controller.getInstance().ucitajListuPredavacKurs();
-//            ptm = new PredavacTableModel(lista);
-//            frmPredavacKurs.getTblPredavacKurs().setModel(ptm);
-//            ptm.setLista(lista);    
-    //reposit
-//    public List<GenericEntity> vratiSaJoin(GenericEntity entity) throws Exception;
-//    public List<GenericEntity> vratiSaJoinPodUslovom(GenericEntity entity) throws Exception;
+    @Override
+    public String getLogin(GenericEntity entity) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

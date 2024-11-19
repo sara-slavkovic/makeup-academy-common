@@ -24,5 +24,6 @@ public interface GenericEntity extends Serializable {
     public String getOrderCondition();
     public GenericEntity getResult(ResultSet resultSet) throws Exception;
     public String getCondition(GenericEntity entity);
+    public String getLogin(GenericEntity entity);
 
 }

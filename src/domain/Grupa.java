@@ -193,5 +193,10 @@ public class Grupa implements GenericEntity {
         Grupa g = (Grupa) entity;
         return "nazivGrupe LIKE '%" + g.getNazivGrupe() + "%'";
     }
+
+    @Override
+    public String getLogin(GenericEntity entity) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

@@ -172,90 +172,10 @@ public class Predavac implements GenericEntity {
     public String getCondition(GenericEntity entity) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //////////////////////////////
-    
-//    private brojKurseva;//get+set
-//    @Override
-//    public String getTableAbbreviation() {
-//        return " P ";//kao alijas
-//    }
-//    
-//    @Override
-//    public String getOrderBy() {
-//        return " p.ime";//vec je implementirano
-//    }
-//
-//    @Override
-//    public String getPrimaryKey(GenericEntity entity) {
-//        Predavac predavac = (Predavac) entity;
-//        return "id = " + predavac.getIdPredavaca();
-//    }
-
-//
-//    @Override
-//    public String getJoin() {
-//        return " JOIN kurs k ON k.idPredavaca=p.id";
-//    }
-
-//    @Override
-//    public String getJoinColumns() {
-//        return "p.id, p.ime, COUNT(*) AS brojKurseva";
-//    }
-//
-//    @Override
-//    public List<GenericEntity> getListFromJoin(ResultSet resultSet) throws Exception {
-//        List<GenericEntity> lista = new LinkedList<>();
-//        while (resultSet.next()) {
-//            int id = resultSet.getInt("id");
-//            String ime = resultSet.getString("ime");
-//            int brojKurseva = resultSet.getInt("brojKurseva");
-//
-//            Predavac p = new Predavac();
-//            p.setIdPredavaca(id);
-//            p.setIme(ime);
-//            p.setBrojKurseva(brojKurseva);
-//            lista.add(p);
-//        }
-//        return lista;
-//    }
-//
-//    @Override
-//    public String getPrimaryKeyForJoin(GenericEntity entity) {
-//        Predavac p = (Predavac) entity;
-//        return "p.id=" + p.getIdPredavaca();
-//    }
-//
-//    @Override
-//    public String getGroupBy() {
-//        return " GROUP BY P.NAZIV ";
-//    }
-//u genent
-    
-//    public abstract String getTableAbbreviation();
-//    public abstract String getOrderBy();
-//    public abstract String getPrimaryKey(GenericEntity entity);
-//    public abstract String getPrimaryKeyForJoin(GenericEntity entity);
-//    public abstract List<GenericEntity> getListFromJoin(ResultSet rs) throws Exception;
-//    public abstract String getJoin();
-//    public abstract String getGroupBy();
-//    public abstract String getJoinColumns();
+    @Override
+    public String getLogin(GenericEntity entity) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 }

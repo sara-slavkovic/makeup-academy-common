@@ -252,4 +252,10 @@ public class Korisnik implements GenericEntity {
         Korisnik k = (Korisnik) entity;
         return "mejl LIKE '" + k.getIme() + "' OR korisnickoIme LIKE'" + k.getPrezime() + "'";
     }
+
+    @Override
+    public String getLogin(GenericEntity entity) {
+        Korisnik k = (Korisnik) entity;
+        return "korisnickoIme='" + k.getKorisnickoIme() + "' AND lozinka='" + k.getLozinka() + "'";
+    }
 }
